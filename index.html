@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es"
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <title>Grabar Video</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: top;
+            height: 100vh;
+            margin: 0;
+        }
+
+        video {
+            width: 50%;
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <video id="video" autoplay></video>
+    <span id="recordingTime">0:00</span>
+    <label for="listCameras">Camaras</label>
+    <select id="listCameras"></select>
+    <label for="listResolution">Resolucion</label>
+    <select id="listResolutions">
+        <option value="0">Full HD</option>
+        <option value="1">2K</option>
+        <option value="2">4K</option>
+    </select>
+    <label for="listFps">FPS</label>
+    <select id="listFps">
+        <option value="0">30</option>
+        <option value="1">60</option>
+    </select>
+    <label for="listBitRate">Mps</label>
+    <select id="listBitRate">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+        <option value="50">50</option>
+    </select>
+    <button id="btnCapture">Iniciar Grabacion</button>
+    <button id="btnStop">Detener Grabacion</button>
+    <a id="downloadLink" style="display: none;">Descargar Video</a>
+</body>
